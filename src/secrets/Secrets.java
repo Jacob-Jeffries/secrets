@@ -31,8 +31,6 @@ public class Secrets {
       input = new FileInputStream(encryptedFile);
       output = new FileOutputStream(outFileName);
       decrypt(input, output);
-    } catch (IOException e) {
-      System.err.println(e.getMessage());
     } finally {
       if(input != null){
         input.close();
@@ -50,8 +48,6 @@ public class Secrets {
       input = new FileInputStream(plainFile);
       output = new FileOutputStream(outFileName);
       encrypt(key, input, output);
-    } catch (Exception e) {
-      System.err.println(e.getMessage());
     } finally {
       if(input != null){
         input.close();
